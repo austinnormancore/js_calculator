@@ -11,8 +11,6 @@ buttons.forEach((x) => {
 	});
 });
 
-
-// BUG - cannot input decimal after a result without clearing
 function operate (n){
 	ops = ['+', '-', '/', '*'];
 	
