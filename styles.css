@@ -1,0 +1,75 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	margin:auto; 
+	width: 50%;
+	padding-top: 20px;
+}
+
+.container {
+	width: 400px;
+	align-items: center;
+	
+}
+
+.display {
+	border: 1px solid black;
+	text-align: right;
+	height: 100px;
+	width: 398px;
+	font-size: 70px;
+	line-height: 100px;
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: 100px 100px 100px 100px;
+	width: 100%;
+
+}
+
+.bttn {
+	border: 1px solid black;
+	height: 98px;
+	width: 98px;
+	line-height: 98px;
+	background-color: grey;
+	color: white;
+	text-align: center;
+
+}
+.clear {
+	grid-column: 1/-1;
+	width: 398px;
+	color: white;
+	background-color: black;
+}
+
+.op {
+	background-color: orange;
+}
+
+.bttn:hover {
+	opacity: 0.8;
+	
+}
+
+.clear:hover {
+	opacity: 0.8;
+	color: white;
+}
+
+.bttn:active {
+	color: black;
+	border: 3px solid black;
+	height: 94px;
+	width: 94px;
+
+}
+
+.clear:active {
+	border: 3px solid grey;
+	height: 94px;
+	width: 394px;
+	color: grey;
+}
