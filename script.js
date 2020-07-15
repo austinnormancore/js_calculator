@@ -11,6 +11,8 @@ buttons.forEach((x) => {
 	});
 });
 
+
+// BUG - cannot input decimal after a result without clearing
 function operate (n){
 	ops = ['+', '-', '/', '*'];
 	
@@ -20,6 +22,10 @@ function operate (n){
 		}
 		input = func(equation);
 		equation = input;
+		if (input == 'Infinity'){
+			input = "nope!"
+		}
+
 	} else if (ops.includes(n)) {
 		input = n;
 		equation += n;
@@ -30,12 +36,12 @@ function operate (n){
 		input = n;
 		equation += n;
 	} else if (n == '.') {
-		if (!input.includes('.')){
+		if (!input.toString().includes('.')){
 			input += n;
 			equation += n;
 		}
-	} else {
-		if (input === '0'){
+	}  else {
+		if (input === '0' || input === 'nope!'){
 			input = n;
 			equation = n;
 		} else {
@@ -48,6 +54,7 @@ function operate (n){
 	 if (input.toString().length > 10){
 		var tempArr = input.toString().split('')
 		var count = 0;
+		
 		// can't append more than 10 digits
 		if (!input.toString().includes('.')) {
 			input = "too long! "	
